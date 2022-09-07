@@ -7,12 +7,16 @@ public class Filament : MonoBehaviour
     float diameter;
     float cost;
     public float meltTemp = 230f;
-    public int remainingMM;
+    public int remainingMM {get; private set;}
+    
+    
     Color color;
 
-    public void StickToBed()
-    {
+    public string Brand {get; set;}
 
+    public void SetRemainingMM()
+    {
+        remainingMM = 99;
     }
 
     public void PrintObject()

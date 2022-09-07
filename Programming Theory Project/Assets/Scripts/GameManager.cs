@@ -25,7 +25,16 @@ public class GameManager : MonoBehaviour
         Debug.Log(PLA.StickToBed("Satin"));
         Debug.Log(PLA.StickToBed(15));
         Debug.Log(PLA.StickToBed(88));
-        
+
+        Filament.Brand = "Overture";
+        Debug.Log(Filament.Brand);
+
+    //Encapsulation allows reading of remainingMM but not setting.     
+        Filament.SetRemainingMM();
+        Debug.Log(Filament.remainingMM);
+
+        //Filament.remainingMM = 99; 
+
 
     }
 
