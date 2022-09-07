@@ -6,7 +6,7 @@ public class Filament : MonoBehaviour
 {
     float diameter;
     float cost;
-    public int meltTemp = 230;
+    public float meltTemp = 230f;
     public int remainingMM;
     Color color;
 
@@ -50,15 +50,16 @@ public class Filament : MonoBehaviour
         }
     }
 
-    public bool RunOut(int requiredMM)
+    //abstraction
+    public bool HotEnough(float nozzleTempInput)
     {
-        if(requiredMM <= remainingMM)
+        if(nozzleTempInput <= meltTemp)
         {
-            return true;
+            return false;
         }
         else
         {
-            return false;
+            return true;
         }
     }
 
