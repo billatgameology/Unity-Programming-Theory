@@ -17,7 +17,13 @@ public class GameManager : MonoBehaviour
     {
         PLA = GameObject.Find("PLA").GetComponent<PLA>();
         Filament = GameObject.Find("Filament").GetComponent<Filament>();
-        //printStatusTxt.text = "hello";
+        
+        Debug.Log(PLA.StickToBed("PEI"));
+        Debug.Log(PLA.StickToBed("Satin"));
+        Debug.Log(PLA.StickToBed(15));
+        Debug.Log(PLA.StickToBed(88));
+        
+
     }
 
     // Update is called once per frame
@@ -26,6 +32,8 @@ public class GameManager : MonoBehaviour
         
     }
 
+
+    //Polymorphy
     public void PLAButton()
     {
         printStatusTxt.text = PLA.Melt();
